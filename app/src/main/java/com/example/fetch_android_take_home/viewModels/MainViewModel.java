@@ -58,7 +58,7 @@ public class MainViewModel extends ViewModel {
         Collections.sort(NewNameList, new Comparator<HashMap<String, String>>() {
             @Override
             public int compare(HashMap<String, String> item1, HashMap<String, String> item2) {
-                int compare = item1.get("listId").compareTo(item2.get("listId"));
+                int compare = Integer.valueOf(item1.get("listId")).compareTo(Integer.valueOf(item2.get("listId")));
                 if (compare == 0) {
                     compare = item1.get("name").compareTo(item2.get("name"));
                 }
